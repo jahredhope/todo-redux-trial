@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
     "start": "webpack-dev-server",
     "test": "mocha ./test/ --compilers js:babel-core/register --recursive"
   },

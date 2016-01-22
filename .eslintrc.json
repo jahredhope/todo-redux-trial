@@ -5,6 +5,7 @@
     "linebreak-style": [2, "unix"],
     "no-trailing-spaces": 2,
     "comma-dangle": [2, "never"],
+    "comma-spacing": [2, {"before": false, "after": true}],
     "no-debugger": 2,
     "consistent-return": 2,
     "no-mixed-spaces-and-tabs": 2,
