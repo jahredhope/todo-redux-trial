@@ -20,6 +20,7 @@
         "args": "none"
       }
     ],
+    "max-len": [2, 80, 4],
     "semi": [2, "always"],
     "react/forbid-prop-types": 1,
     "react/jsx-boolean-value": 1,

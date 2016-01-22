@@ -1,5 +1,6 @@
 var update = require("react-addons-update");
 import { combineReducers } from "redux";
+import getMaxUniqueIndex from "./getMaxUniqueIndex";
 
 import {
   VisibilityFilters,
@@ -26,7 +27,7 @@ var todos = (state = [], action) => {
     return update(state, {$push: [{
       text: action.text,
       completed: false,
-      uniqueIndex: 1 + state.map((todo) => todo.uniqueIndex).reduce((index, prevIndex) => index > prevIndex ? index : prevIndex, 0)
+      uniqueIndex: 1 + getMaxUniqueIndex(state)
     }]});
   case COMPLETE_TODO:
     return state.map((todo) => {

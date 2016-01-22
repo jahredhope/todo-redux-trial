@@ -7,3 +7,7 @@ Added a unique index to resolve issue where filtered list indexes did not relate
     npm start
 
     Navigate to localhost:8080
+
+## Notable things trialing
+Extremely strict ESLint rules with --fix
+Webpack pre-loader for eslint-loader
