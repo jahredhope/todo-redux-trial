@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "start": "webpack-dev-server",
-    "test": "mocha ./tests/ --compilers js:babel-core/register --recursive"
+    "test": "mocha ./test/ --compilers js:babel-core/register --recursive"
   },
   "author": "Jahred Hope (jahredhope@gmail.com)",
   "license": "ISC",

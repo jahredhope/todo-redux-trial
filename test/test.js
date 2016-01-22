@@ -15,6 +15,13 @@ describe("actions", ()=> {
       text: text
     });
   });
+  it("should create an action to complete a todo", ()=> {
+    const uniqueIndex = 3;
+    expect(actions.completeTodo(uniqueIndex)).to.eql({
+      type: actions.COMPLETE_TODO,
+      uniqueIndex: uniqueIndex
+    });
+  });
 });
 
 describe("reducers", ()=> {
