@@ -7,9 +7,6 @@ import * as actions from "../src/actions";
 
 import reducer from "../src/reducers";
 
-describe("hello app", () => {
-});
-
 describe("actions", ()=> {
   it("should create an action to add a todo", ()=> {
     const text = "Item Text";

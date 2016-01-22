@@ -1,17 +1,8 @@
 {
   "rules": {
-    "indent": [
-      2,
-      2
-    ],
-    "quotes": [
-      2,
-      "double"
-    ],
-    "linebreak-style": [
-      2,
-      "unix"
-    ],
+    "indent": [2, 2],
+    "quotes": [2, "double"],
+    "linebreak-style": [2, "unix"],
     "no-trailing-spaces": 2,
     "comma-dangle": [2, "never"],
     "no-debugger": 2,
@@ -20,10 +11,7 @@
     "valid-jsdoc": 2,
     "space-after-keywords": 2,
     "space-in-parens": 2,
-    "complexity": [
-      2,
-      4
-    ],
+    "complexity": [2, 4],
     "no-unused-vars": [
       2, {
         "vars": "all",
@@ -31,10 +19,7 @@
         "args": "none"
       }
     ],
-    "semi": [
-      2,
-      "always"
-    ],
+    "semi": [2, "always"],
     "react/forbid-prop-types": 1,
     "react/jsx-boolean-value": 1,
     "react/jsx-curly-spacing": 1,
