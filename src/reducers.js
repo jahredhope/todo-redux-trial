@@ -1,6 +1,6 @@
 var update = require("react-addons-update");
 import { combineReducers } from "redux";
-import getMaxUniqueIndex from "./getMaxUniqueIndex";
+import getNextUniqueIndex from "./getNextUniqueIndex";
 
 import {
   VisibilityFilters,
@@ -27,7 +27,7 @@ var todos = (state = [], action) => {
     return update(state, {$push: [{
       text: action.text,
       completed: false,
-      uniqueIndex: 1 + getMaxUniqueIndex(state)
+      uniqueIndex: getNextUniqueIndex(state)
     }]});
   case COMPLETE_TODO:
     return state.map((todo) => {
@@ -43,7 +43,6 @@ var todos = (state = [], action) => {
 
 function logWrapper(func) {
   return function(state, action){
-    /*eslint no-console: 0*/
     console.log("action", action);
     console.log("state", state);
     var result = func(state, action);

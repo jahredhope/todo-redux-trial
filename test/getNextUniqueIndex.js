@@ -2,7 +2,7 @@
 "use strict";
 let expect = require("chai").expect;
 
-import getMaxUniqueIndex from "../src/getMaxUniqueIndex";
+import getNextUniqueIndex from "../src/getNextUniqueIndex";
 
 function mockTodo(value) {
   return {uniqueIndex: value};
@@ -10,22 +10,24 @@ function mockTodo(value) {
 
 describe("getMaxUniqueIndex", ()=> {
   it("should give an initial value", ()=> {
-    expect(getMaxUniqueIndex([])).to.equal(0);
+    expect(getNextUniqueIndex([])).to.equal(1);
   });
-  it("should give the maximum number", ()=> {
-    expect(getMaxUniqueIndex([
+
+  it("should give the highest number plus", ()=> {
+    expect(getNextUniqueIndex([
       mockTodo(1),
       mockTodo(2),
       mockTodo(3),
       mockTodo(4)]
-    )).to.equal(4);
+    )).to.equal(5);
   });
-  it("should give the maximum number even with a gap", ()=> {
-    expect(getMaxUniqueIndex([
+
+  it("should give the next highest number even with a gap", ()=> {
+    expect(getNextUniqueIndex([
       mockTodo(1),
       mockTodo(6),
-      mockTodo(5),
+      mockTodo(undefined),
       mockTodo(4)]
-    )).to.equal(6);
+    )).to.equal(7);
   });
 });
