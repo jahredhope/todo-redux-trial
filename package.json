@@ -10,6 +10,7 @@
     "test": "mocha ./test/ --compilers js:babel-core/register --recursive"
   },
   "author": "Jahred Hope (jahredhope@gmail.com)",
+  "repository": "https://github.com/jahredhope/todo-redux-trial",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.4.0",
