@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
+    "build": "webpack -p",
     "release": "release",
     "start": "webpack-dev-server",
     "test": "mocha ./test/ --compilers js:babel-core/register --recursive"
@@ -41,6 +42,15 @@
   "release-script": {
     "defaultDryRun": "true"
   },
+  "private": true,
+  "directories": [
+    "dist"
+  ],
+  "files": [
+    "dist",
+    "lib",
+    "README.md"
+  ],
   "pre-commit": [
     "lint",
     "test"
