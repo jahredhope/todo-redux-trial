@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from "react";
+import React, { Component, PropTypes } from 'react';
 
 export default class Todo extends Component {
   render() {
@@ -6,10 +6,10 @@ export default class Todo extends Component {
       <li
         onClick={this.props.onClick}
         style={{
-          textDecoration: this.props.completed ? "line-through" : "none",
-          cursor: this.props.completed ? "default" : "pointer"
+          textDecoration: this.props.completed ? 'line-through' : 'none',
+          cursor: this.props.completed ? 'default' : 'pointer'
         }}>
-        {this.props.uniqueIndex + ":  " + this.props.text}
+        {this.props.uniqueIndex + ':  ' + this.props.text}
       </li>
     );
   }

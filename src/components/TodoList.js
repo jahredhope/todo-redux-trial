@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from "react";
-import Todo from "./Todo";
+import React, { Component, PropTypes } from 'react';
+import Todo from './Todo';
 
 export default class TodoList extends Component {
   render() {
@@ -7,9 +7,9 @@ export default class TodoList extends Component {
       <ul>
         {this.props.todos.map((todo, index) =>
           <Todo {...todo}
-                key={index}
-                uniqueIndex={todo.uniqueIndex}
-                onClick={() => this.props.onTodoClick(todo.uniqueIndex)} />
+            key={index}
+            uniqueIndex={todo.uniqueIndex}
+            onClick={() => this.props.onTodoClick(todo.uniqueIndex)} />
         )}
       </ul>
     );

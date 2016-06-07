@@ -1,6 +1,6 @@
-var update = require("react-addons-update");
-import { combineReducers } from "redux";
-import getNextUniqueIndex from "./getNextUniqueIndex";
+var update = require('react-addons-update');
+import { combineReducers } from 'redux';
+import getNextUniqueIndex from './getNextUniqueIndex';
 
 import {
   VisibilityFilters,
@@ -8,7 +8,7 @@ import {
   ADD_TODO,
   COMPLETE_TODO
 }
-from "./actions";
+from './actions';
 const { SHOW_ALL } = VisibilityFilters;
 
 
@@ -43,10 +43,10 @@ var todos = (state = [], action) => {
 
 function logWrapper(func) {
   return function(state, action){
-    console.log("action", action);
-    console.log("state", state);
+    console.log('action', action); // eslint-disable-line no-console
+    console.log('state', state); // eslint-disable-line no-console
     var result = func(state, action);
-    console.log("result", result);
+    console.log('result', result); // eslint-disable-line no-console
     return result;
   };
 }

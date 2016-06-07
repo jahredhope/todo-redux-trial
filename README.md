@@ -1,6 +1,6 @@
 # todo-redux-trial
 
-Added a unique index to resolve issue where filtered list indexes did not relate to state indexes
+Added a unique index to resolve issue where filtered list indexes did not relate to state indexes.
 
 ## To Run
     npm install
@@ -12,4 +12,4 @@ Added a unique index to resolve issue where filtered list indexes did not relate
 
 Extremely strict ESLint rules with --fix
 
-Webpack pre-loader for eslint-loader
+Webpack 2

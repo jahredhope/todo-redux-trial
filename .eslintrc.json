@@ -1,7 +1,7 @@
 {
   "rules": {
     "indent": [2, 2],
-    "quotes": [2, "double"],
+    "quotes": [2, "single"],
     "linebreak-style": [2, "unix"],
     "no-trailing-spaces": 2,
     "comma-dangle": [2, "never"],
@@ -10,7 +10,7 @@
     "consistent-return": 2,
     "no-mixed-spaces-and-tabs": 2,
     "valid-jsdoc": 2,
-    "space-after-keywords": 2,
+    "keyword-spacing": 2,
     "space-in-parens": 2,
     "complexity": [2, 4],
     "no-console": [1],
@@ -22,7 +22,7 @@
       }
     ],
     "max-len": [2, 80, 4],
-    "semi": [2, "always"],
+    "semi": [0, "always"],
     "react/forbid-prop-types": 1,
     "react/jsx-boolean-value": 1,
     "react/jsx-curly-spacing": 1,
@@ -41,7 +41,7 @@
     "react/no-direct-mutation-state": 1,
     "react/no-is-mounted": 1,
     "react/no-multi-comp": 1,
-    "react/no-set-state": 1,
+    "react/no-set-state": 0,
     "react/no-unknown-property": 1,
     "react/prefer-es6-class": 1,
     "react/prop-types": 1,
@@ -56,15 +56,18 @@
     "node": true
   },
   "extends": "eslint:recommended",
-  "ecmaFeatures": {
-    "jsx": true,
-    "experimentalObjectRestSpread": true,
-    "modules": true,
-    "classes": true,
-    "blockBindings": true,
-    "arrowFunctions": true,
-    "destructuring": true,
-    "defaultParams": true
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true,
+      "modules": true,
+      "classes": true,
+      "blockBindings": true,
+      "arrowFunctions": true,
+      "destructuring": true,
+      "defaultParams": true
+    }
   },
   "plugins": [
     "react"
