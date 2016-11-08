@@ -1,24 +1,37 @@
+var webpack = require('webpack');
+var path = require('path');
+
 module.exports = {
-  entry: './src/index.js',
+  entry: [
+    'react-hot-loader/patch',
+    'webpack-hot-middleware/client',
+    './src/index.js'
+  ],
   output: {
-    path: './dist/',
+    path: path.resolve(__dirname, 'dist'),
     filename: './app.js'
   },
   module: {
-    preLoaders: [
-      {test: /\.js$/, loader: 'eslint-loader', exclude: /node_modules/}
-    ],
-    loaders: [{
+    rules: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loader: 'babel',
-      query: {'presets': ['es2015-native-modules', 'react']}
-    },
-    { test: /\.(jpg|png)$/, loader: 'base64-image' }]
+      enforce: 'pre',
+      loader: 'eslint'
+    }, {
+      test: /\.js$/,
+      exclude: /node_modules/,
+      loader: ['babel']
+    }, {
+      test: /\.(jpg|png)$/,
+      loader: 'base64-image'
+    }]
   },
   resolve: {
-    modulesDirectories: ['./src', 'node_modules']
+    modules: ['./src', 'node_modules']
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
   devServer: {
     contentBase: './',
     headers: { 'Access-Control-Allow-Origin': '*'}
